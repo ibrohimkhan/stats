@@ -6,7 +6,12 @@ import (
 
 // Avg calculates average payment
 func Avg(payments []types.Payment) types.Money {
-	size := len(payments)
+	size := 0
+	for _, payment := range payments {
+		if payment.Status != types.StatusFail {
+			size++
+		}
+	}
 	
 	sum := 0
 	for _, payment := range payments {

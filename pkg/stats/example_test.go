@@ -9,9 +9,11 @@ func ExampleAvg() {
 	payments := []types.Payment {
 		{
 			Amount: 9,
+			Status: types.StatusOk,
 		},
 		{
 			Amount: 9,
+			Status: types.StatusOk,
 		},
 		{
 			Amount: 5,
@@ -22,7 +24,7 @@ func ExampleAvg() {
 	fmt.Println(Avg(payments))
 
 	// Outputs:
-	// 6
+	// 9
 }
 
 func ExampleTotalInCategory() {
