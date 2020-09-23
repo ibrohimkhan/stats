@@ -1,5 +1,5 @@
-module github.com/ibrohimkhan/stats
+module github.com/ibrohimkhan/stats/v2
 
 go 1.15
 
-require github.com/ibrohimkhan/bank v0.0.0-20200923171244-cd711b19c7e6
+require github.com/ibrohimkhan/bank/v2 v2.0.0

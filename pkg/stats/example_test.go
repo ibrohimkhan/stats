@@ -2,7 +2,7 @@ package stats
 
 import (
 	"fmt"
-	"github.com/ibrohimkhan/bank/pkg/types"
+	"github.com/ibrohimkhan/bank/v2/pkg/types"
 )
 
 func ExampleAvg() {
@@ -11,17 +11,18 @@ func ExampleAvg() {
 			Amount: 9,
 		},
 		{
-			Amount: 7,
+			Amount: 9,
 		},
 		{
 			Amount: 5,
+			Status: types.StatusFail,
 		},
 	}
 
 	fmt.Println(Avg(payments))
 
 	// Outputs:
-	// 7
+	// 6
 }
 
 func ExampleTotalInCategory() {
@@ -37,6 +38,7 @@ func ExampleTotalInCategory() {
 		{
 			Amount: 5,
 			Category: "pc",
+			Status: types.StatusFail,
 		},
 	}
 
@@ -45,5 +47,5 @@ func ExampleTotalInCategory() {
 
 	// Outputs:
 	// 16
-	// 5
+	// 0
 }
