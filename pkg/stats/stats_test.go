@@ -9,22 +9,26 @@ import (
 func TestCategoriesAvg(t *testing.T) {
 	payments := []types.Payment {
 		{
-			Amount: 9,
+			Amount: 1,
 			Category: "auto",
 		},
 		{
-			Amount: 7,
+			Amount: 2,
 			Category: "auto",
 		},
 		{
-			Amount: 5,
-			Category: "pc",
+			Amount: 3,
+			Category: "auto",
+		},
+		{
+			Amount: 550000,
+			Category: "fun",
 		},
 	}
 
 	expected := map[types.Category]types.Money {
-		"auto": 8,
-		"pc": 5,
+		"auto": 2,
+		"fun": 550000,
 	}
 
 	result := CategoriesAvg(payments)
